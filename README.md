@@ -24,8 +24,9 @@ Please ensure that the structure is correct.
 
 During the VASP calculation, please set:
 
-```bash
+'''bash
 LCHARG = T
+'''
 
 Both NGZF.txt and PLANAR_AVERAGE.dat are generated based on the resulting CHGCAR.
 
@@ -33,8 +34,9 @@ Both NGZF.txt and PLANAR_AVERAGE.dat are generated based on the resulting CHGCAR
 NGZF.txt contains the NGZF value, which represents the number of grid divisions along the z-direction in the VASP calculation.
 
 It can be extracted from OUTCAR using:
-
+'''
 grep NGZF OUTCAR | head -n 1 | awk '{print $8}'
+'''
 
 
 
