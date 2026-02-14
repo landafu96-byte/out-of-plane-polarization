@@ -74,8 +74,9 @@ python polar.py your\base\path
 ```
 
 The output file polar.csv will be generated under the base path.  
-```
+
 Output Format
+```
 |material | polar|
 | ----------- | ----------- |
 |material_1 | polar_1  |
