@@ -41,7 +41,7 @@ grep NGZF OUTCAR | head -n 1 | awk '{print $8}' > NGZF.txt
 ```
 
 ### 4. val.json
-val.json is a file including elements and corresponding valance electrons. val.py can be use to obtain it with 
+val.json is a file including elements and corresponding valence electrons. val.py can be use to obtain it with 
 ```
 python val.py
 ```
@@ -77,13 +77,14 @@ The output file polar.csv will be generated under the base path.
 
 Output Format
 
-```
+
 |material | polar|
 | ----------- | ----------- |
 |material_1 | polar_1  |
 |material_2 | polar_2  |
 |... | ...|
-```
+
+
   
 
 
