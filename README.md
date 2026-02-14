@@ -35,19 +35,22 @@ You can obtain this file using `VASPKIT`:
 
 ### 3. NGZF 
 `NGZF.txt` contains the NGZF value, which represents the number of grid divisions along the z-direction in the VASP calculation.
-It can be extracted from OUTCAR using:
+It can be extracted from `OUTCAR` using:
 ```
 grep NGZF OUTCAR | head -n 1 | awk '{print $8}' > NGZF.txt
 ```
 
 ### 4. val.json
-`val.json` is a file including elements and corresponding valence electrons. val.py can be use to obtain it with 
+`zval.json` contains the number of valence electrons for each element in the structure.  
+It can be generated using the `val.py` script:
+
 ```
 python val.py
 ```
 
 ## Usage
-Your data should be arranged in the following structure:
+Your data should be organized in the following directory structure:
+
 ```
 base path/
 ├──material_1  
