@@ -33,7 +33,7 @@ You can obtain this file using `VASPKIT` under your working directory:
 (echo 316;echo 1;echo 3)|vaspkit
 ```
 
-### 3. NGZF 
+### 3. NGZF.txt
 `NGZF.txt` contains the NGZF value, which represents the number of grid divisions along the z-direction in the VASP calculation.
 It can be extracted from `OUTCAR` using:
 ```
@@ -47,7 +47,7 @@ It can be generated using the `val.py` script under your working directory:
 ```
 python val.py
 ```
-
+---
 ## Usage
 Your data should be organized in the following directory structure:
 
@@ -76,7 +76,7 @@ Run the script with:
 python polar.py your\base\path
 ```
 
-The output file polar.csv will be generated under the base path.  
+The output file `polar.csv` will be generated under the base path.  
 
 Output Format
 
