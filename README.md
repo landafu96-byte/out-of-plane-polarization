@@ -71,18 +71,24 @@ base path/
 ├──...
 ```
 
-Before you run the 'polar.py', please ensure that you have installed the latest version of numpy, pymatgen, pandas and argparse
-Run 'polar.py' with 
+Before running polar.py, please ensure that the following Python packages are installed:
+-numpy
+-pymatgen
+-pandas
+-argparse
+
+Run the script with:
 ```
 python polar.py your\base\path
 ```
 
-The output file 'polar.csv' will be under base path, and the structure of 'polar.csv' is
+The output file polar.csv will be generated under the base path.
+Output Format
 ```
-material | polar  
-material_1 | polar_1  
-material_2 | polar_2  
-... | ...
+|material | polar|
+|material_1 | polar_1  |
+|material_2 | polar_2  |
+|... | ...|
 ```
   
 
