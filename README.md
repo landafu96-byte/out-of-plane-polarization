@@ -28,15 +28,63 @@ During the VASP calculation, please set:
 LCHARG = T
 ```
 
-Both NGZF.txt and PLANAR_AVERAGE.dat are generated based on the resulting CHGCAR.
+PLANAR_AVERAGE.dat are generated based on the resulting CHGCAR.
 
-### 2. NGZF generation
+### 2. PLANAR_AVERAGE.dat generation
+PLANAR_AVERAGE.dat is a charge file being processed by VASPKIT. The charge density of x-y plane is intergated. Ensure that you have a CHGCAR, and obtain the file with 
+```
+(echo 316;echo 1;echo 3)|vaspkit
+```
+
+### 3. NGZF generation
 NGZF.txt contains the NGZF value, which represents the number of grid divisions along the z-direction in the VASP calculation.
 
 It can be extracted from OUTCAR using:
 ```
-grep NGZF OUTCAR | head -n 1 | awk '{print $8}'
+grep NGZF OUTCAR | head -n 1 | awk '{print $8}' > NGZF.txt
 ```
+
+### 4. val.json generation
+val.json is a file including elements and corresponding valance electrons. val.py can be use to obtain it with 
+```
+python val.py
+```
+### 4. PLANAR_AVERAGE.dat generation
+PLANAR_AVERAGE.dat is a charge file being processed by VASPKIT. The charge density of x-y plane is intergated. Ensure that you have a CHGCAR, and obtain the file with 
+```
+(echo 316;echo 1;echo 3)|vaspkit
+```
+
+## Usage
+Your data should be arranged in the following structure:
+
+-base path
+  -material_1
+    -POSCAR
+    -NGZF.txt
+    -val.json
+    -PLANAR_AVERAGE.dat
+  -material_2
+    -...
+  -material_3
+    -...
+  -...
+
+Before you run the 'polar.py', please ensure that you have installed the latest version of numpy, pymatgen, pandas and argparse
+Run 'polar.py' with 
+```
+python polar.py your\base\path
+```
+The output file 'polar.csv' will be under base path, and the structure of 'polar.csv' is
+
+- material   polar
+-material_1 polar_1
+-material_2 polar_2
+-...
+
+  
+
+
 
 
 
