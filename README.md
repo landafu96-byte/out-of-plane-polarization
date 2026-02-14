@@ -57,7 +57,7 @@ PLANAR_AVERAGE.dat is a charge file being processed by VASPKIT. The charge densi
 
 ## Usage
 Your data should be arranged in the following structure:
-
+```
 base path/
 ├──material_1  
 │├──POSCAR  
@@ -68,20 +68,22 @@ base path/
 │├──...  
 ├──material_3  
 │├──...  
-├──...  
+├──...
+```
 
 Before you run the 'polar.py', please ensure that you have installed the latest version of numpy, pymatgen, pandas and argparse
 Run 'polar.py' with 
 ```
 python polar.py your\base\path
 ```
-The output file 'polar.csv' will be under base path, and the structure of 'polar.csv' is
 
+The output file 'polar.csv' will be under base path, and the structure of 'polar.csv' is
+```
 material | polar  
 material_1 | polar_1  
 material_2 | polar_2  
 ... | ...
-
+```
   
 
 
