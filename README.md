@@ -27,7 +27,7 @@ LCHARG = T
 ```
 `PLANAR_AVERAGE.dat` is generated based on the resulting `CHGCAR`. It contains the charge density averaged over the x–y plane along the z-direction.
 
-You can obtain this file using 'VASPKIT':
+You can obtain this file using `VASPKIT`:
 
 ```
 (echo 316;echo 1;echo 3)|vaspkit
