@@ -27,7 +27,7 @@ LCHARG = T
 ```
 `PLANAR_AVERAGE.dat` is generated based on the resulting `CHGCAR`. It contains the charge density averaged over the x–y plane along the z-direction.
 
-You can obtain this file using `VASPKIT`:
+You can obtain this file using `VASPKIT` under your working directory:
 
 ```
 (echo 316;echo 1;echo 3)|vaspkit
@@ -42,7 +42,7 @@ grep NGZF OUTCAR | head -n 1 | awk '{print $8}' > NGZF.txt
 
 ### 4. val.json
 `zval.json` contains the number of valence electrons for each element in the structure.  
-It can be generated using the `val.py` script:
+It can be generated using the `val.py` script under your working directory:
 
 ```
 python val.py
